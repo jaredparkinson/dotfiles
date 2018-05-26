@@ -3,7 +3,7 @@
 ### WSL Configuration / Install
 Run the following to configure WSL from scratch...
 ```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/jldeen/dotfiles/wsl/configure.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/jaredparkinson/dotfiles/wsl/configure.sh)"
 ```
 ### WSL Emulator Install
 Run the following command from an Administrator PowerShell prompt...
