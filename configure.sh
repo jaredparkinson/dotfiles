@@ -82,7 +82,6 @@ echo "Now installing Speedtest-cli, pip, tmux and jq..."
 echo ''
 sudo apt-get install jq tmux python-pip -y
 sudo pip install --upgrade pip
-sudo pip install speedtest-cli
 
 # Bash color scheme
 echo ''
@@ -168,6 +167,24 @@ fi
 else 
     echo "You chose not to set your default shell to zsh. Exiting now..."
 fi
+sudo apt install apt-transport-https dirmngr
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+echo "deb https://download.mono-project.com/repo/debian stable-stretch main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+sudo apt update
+
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
+sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
+wget -q https://packages.microsoft.com/config/debian/9/prod.list
+sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
+sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
+sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
+sudo apt update
+
+sudo apt-get install dotnet-sdk-2.1 git openssl mono-devel vim
+
+export NVS_HOME="$HOME/.nvs"
+git clone https://github.com/jasongin/nvs "$NVS_HOME"
+. "$NVS_HOME/nvs.sh" install
 
 echo ''
 echo '	Badass WSL terminal installed! Please reboot your computer for changes to be made.'
