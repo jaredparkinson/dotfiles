@@ -186,5 +186,9 @@ export NVS_HOME="$HOME/.nvs"
 git clone https://github.com/jasongin/nvs "$NVS_HOME"
 . "$NVS_HOME/nvs.sh" install
 
+nvs add chakracore
+nvs add chakracore-nightly
+nvs add node
+
 echo ''
 echo '	Badass WSL terminal installed! Please reboot your computer for changes to be made.'
