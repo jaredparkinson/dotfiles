@@ -138,3 +138,14 @@ export PATH=$PATH:~/bin
 # az cli
 # autoload bashcompinit && bashcompinit
 # source /usr/bin/az
+GPG_TTY=$(tty)
+export GPG_TTY
+
+export NVS_HOME="$HOME/.nvs"
+
+. "$NVS_HOME/nvs.sh" install
+
+
+nvs use chakracore-nightly
+
+cd /mnt/c/Users/jared/source/repos
