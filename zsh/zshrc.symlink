@@ -146,6 +146,6 @@ export NVS_HOME="$HOME/.nvs"
 . "$NVS_HOME/nvs.sh" install
 
 
-nvs use chakracore-nightly
+nvs use node
 
 cd /mnt/c/Users/jared/source/repos
