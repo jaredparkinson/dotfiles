@@ -1,19 +1,9 @@
 #!/bin/bash
-<<<<<<< HEAD
-
-# Install brew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-=======
->>>>>>> wsl
 
 # Update pkg lists
 echo "Updating package lists..."
-<<<<<<< HEAD
-brew update
-=======
 sudo apt-get update
 
->>>>>>> wsl
 # zsh install
 which zsh > /dev/null 2>&1
 if [[ $? -eq 0 ]] ; then
@@ -22,12 +12,8 @@ echo "zsh already installed..."
 else
 echo "zsh not found, now installing zsh..."
 echo ''
-<<<<<<< HEAD
-brew install zsh zsh-completions
-=======
 sudo apt install zsh -y
 fi
->>>>>>> wsl
 
 # Installing git completion
 echo ''
@@ -111,10 +97,6 @@ echo "Now installing Midnight commander..."
 echo ''
 brew install mc
 
-<<<<<<< HEAD
-# Speedtest-cli and jq install
-brew install jq speedtest-cli
-=======
 # Speedtest-cli, pip and jq install
 echo ''
 echo "Now installing Speedtest-cli, pip, tmux and jq..."
@@ -128,7 +110,6 @@ echo "Now installing solarized dark WSL color scheme..."
 echo ''
 wget https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.256dark
 mv dircolors.256dark .dircolors
->>>>>>> wsl
 
 # Pull down personal dotfiles
 echo ''
@@ -142,24 +123,11 @@ then
 	echo ''
 	cd $HOME/.dotfiles && echo "switched to .dotfiles dir..."
 	echo ''
-<<<<<<< HEAD
-	echo "Checking out macOS branch..." && git checkout mac
-=======
 	echo "Checking out wsl branch..." && git checkout wsl
->>>>>>> wsl
 	echo ''
 	echo "Now configuring symlinks..." && $HOME/.dotfiles/script/bootstrap
     if [[ $? -eq 0 ]]
     then
-<<<<<<< HEAD
-        echo "Successfully configured your environment with jldeen's macOS dotfiles..."
-    else
-        echo "jldeen's macOS dotfiles were not applied successfully..." >&2
-fi
-else 
-	echo ''
-    echo "You chose not to apply jldeen's macOS dotfiles. You will need to configure your environment manually..."
-=======
         echo "Successfully configured your environment with Jared Parkinson's dotfiles..."
     else
         echo "Jared Parkinson's dotfiles were not applied successfully..." >&2
@@ -167,7 +135,6 @@ fi
 else 
 	echo ''
     echo "You chose not to apply Jared Parkinson's dotfiles. You will need to configure your environment manually..."
->>>>>>> wsl
 	echo ''
 	echo "Setting defaults for .zshrc and .bashrc..."
 	echo ''
@@ -186,9 +153,6 @@ echo ''
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
 	echo "Now installing az cli..."
-<<<<<<< HEAD
-    brew install azure-cli
-=======
     AZ_REPO=$(lsb_release -cs)
     echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | \
      sudo tee /etc/apt/sources.list.d/azure-cli.list
@@ -198,7 +162,6 @@ then
     sudo apt-get install apt-transport-https
     sudo apt-get update && sudo apt-get install azure-cli
 	
->>>>>>> wsl
     if [[ $? -eq 0 ]]
     then
         echo "Successfully installed Azure CLI 2.0."
@@ -251,8 +214,4 @@ nvs add node
 
 
 echo ''
-<<<<<<< HEAD
-echo '	Badass macOS terminal installed!'
-=======
 echo '	Badass WSL terminal installed! Please reboot your computer for changes to be made.'
->>>>>>> wsl

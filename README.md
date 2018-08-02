@@ -1,37 +1,14 @@
 # jared does dotfiles - forked from jldeen's repo
 
-<<<<<<< HEAD
-### macOS Configuration
-Run the following to configure macOS from scratch...
-```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/jldeen/dotfiles/mac/configure.sh)"
-```
-
-### WSL Configuration
-=======
 ### WSL Configuration / Install
->>>>>>> wsl
 Run the following to configure WSL from scratch...
 ```
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/jaredparkinson/dotfiles/wsl/configure.sh)"
 ```
-<<<<<<< HEAD
-
-## install
-There are two "master" branches here: WSL and MacOS; there are two "dev" branches here wsl-dev and mac-dev.
-
-Run this if you wish to run from clone:
-
-```sh
-git clone https://github.com/jldeen/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
-script/bootstrap
-=======
 ### WSL Emulator Install
 Run the following command from an Administrator PowerShell prompt...
 ```
 Set-ExecutionPolicy Bypass; irm 'https://raw.githubusercontent.com/jldeen/dotfiles/wsl/wslterm.ps1' | iex;
->>>>>>> wsl
 ```
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
@@ -92,8 +69,6 @@ There's a few special files in the hierarchy.
   but still keep those autoloaded files in your home directory. These get
   symlinked in when you run `script/bootstrap`.
 
-<<<<<<< HEAD
-=======
 ## Git clone
 There are two "master" branches here: WSL and MacOS.
 
@@ -116,7 +91,6 @@ defaults, and so on. Tweak this script, and occasionally run `dot` from
 time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
 
->>>>>>> wsl
 ## bugs
 
 I want this to work for everyone; that means when you clone it down it should
