@@ -25,12 +25,13 @@ brew install gnu-sed --with-default-names
 # Install a modern version of Bash.
 brew install bash
 brew install bash-completion2
+brew install zsh
 
 # Switch to using brew-installed bash as default shell
 if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
-  echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
-  chsh -s "${BREW_PREFIX}/bin/bash";
-fi;
+	echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells
+	chsh -s "${BREW_PREFIX}/bin/bash"
+fi
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
@@ -42,8 +43,8 @@ brew install gnupg
 brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
-brew install screen
-brew install php
+# brew install screen
+# brew install php
 brew install gmp
 
 # Install font tools.
@@ -81,9 +82,11 @@ brew install xz
 # Install other useful binaries.
 brew install ack
 #brew install exiv2
+brew install exiftool
 brew install git
 brew install git-lfs
 brew install gs
+brew install gh
 brew install imagemagick --with-webp
 brew install lua
 brew install lynx
@@ -96,6 +99,28 @@ brew install ssh-copy-id
 brew install tree
 brew install vbindiff
 brew install zopfli
+brew install asdf
 
+brew install dupeguru
+brew install graphviz
+brew install tree
+brew install libopencv-dev
+brew install --cask eloston-chromium
+brew install rmlint
+brew install qimgv
+brew install testdisk
+brew install ddclient
+brew install --cask raycast
+brew install --cask chromedriver
+brew install fd
+brew install --cask wine-stable
+brew install --cask inkscape
+brew install --cask krita
+brew install oven-sh/bun/bun
+brew install ffmpeg
+brew install rclone
+brew install clamav
+brew install poppler
+brew install musicbrainz-picard
 # Remove outdated versions from the cellar.
 brew cleanup
