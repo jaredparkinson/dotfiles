@@ -120,6 +120,7 @@ brew install oven-sh/bun/bun
 brew install ffmpeg
 brew install rclone
 brew install clamav
+brew install mas
 brew install poppler
 brew install musicbrainz-picard
 # Remove outdated versions from the cellar.
