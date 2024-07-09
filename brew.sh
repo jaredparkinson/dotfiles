@@ -100,6 +100,7 @@ brew install tree
 brew install vbindiff
 brew install zopfli
 brew install asdf
+brew install --cask kitty
 
 brew install dupeguru
 brew install graphviz
