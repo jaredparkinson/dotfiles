@@ -43,8 +43,8 @@ brew install gnupg
 brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
-# brew install screen
-# brew install php
+brew install screen
+brew install php
 brew install gmp
 
 # Install font tools.
@@ -81,7 +81,7 @@ brew install xz
 
 # Install other useful binaries.
 brew install ack
-#brew install exiv2
+brew install exiv2
 brew install exiftool
 brew install git
 brew install git-lfs
